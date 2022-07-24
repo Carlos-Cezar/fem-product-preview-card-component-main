@@ -1,0 +1,243 @@
+:root {
+  --ff-fraunces: "Fraunces", serif;
+  --ff-montserrat: "Montserrat", sans-serif;
+
+  --fs: 1rem;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --clr-primary-300: hsl(30, 38%, 92%);
+  --clr-primary-400: hsl(158, 36%, 37%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(228, 12%, 48%);
+  --clr-neutral-800: hsl(212, 21%, 14%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CSS Reset Above */
+body {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs);
+  background-color: var(--clr-primary-300);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  font-family: var(--ff-fraunces);
+}
+
+p {
+  color: var(--clr-neutral-200);
+}
+
+.container {
+  border-radius: 0.5rem;
+  background-color: var(--clr-neutral-100);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 35rem;
+  margin-top: min(1rem);
+}
+
+.hero-img {
+  background-image: url(/images/image-product-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 15rem;
+}
+
+.hero {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.product-name {
+  width: 15ch;
+  line-height: 2rem;
+  color: var(--clr-neutral-800);
+  margin-top: 1rem;
+}
+
+.description {
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.price h1 {
+  color: var(--clr-primary-400);
+}
+
+.price p {
+  margin: 0;
+  text-decoration: line-through;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--fw-bold);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn img {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+
+.btn:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+/* Media Queries */
+
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 50rem;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .hero-img {
+    background-image: url(/images/image-product-desktop.jpg);
+  }
+
+  .hero {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .product-name {
+    width: 10ch;
+    line-height: 1;
+    margin-top: 0rem;
+  }
+
+  .description {
+    margin: 0rem 0;
+  }
+
+  .btn {
+    padding: 1.2rem;
+    margin-top: 0rem;
+    font-size: 1rem;
+  }
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
