@@ -121,7 +121,7 @@ p {
 }
 
 .hero-img {
-  background-image: url(/images/image-product-mobile.jpg);
+  background-image: url(./images/image-product-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 15rem;
@@ -207,7 +207,7 @@ p {
   }
 
   .hero-img {
-    background-image: url(/images/image-product-desktop.jpg);
+    background-image: url(./images/image-product-desktop.jpg);
   }
 
   .hero {
